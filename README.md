@@ -13,26 +13,26 @@ This project provides a set of scripts for signing, encrypting, and verifying fi
 
 ### Python Scripts
 
-1. **sign_message.py**: 
+1. **gpg-clearsign-cmd.zsh**: 
    - Prompts for a message and signs it using GPG.
    - Requires GPG installed and configured.
 
-2. **verify_signature.py**: 
+2. **gpg-verify-clearsign.zsh**: 
    - Verifies a signed message using a public key.
 
 ### Bash Scripts
 
-1. **crypt-sym-file.zsh**: 
+1. **gpg-crypt-sym.zsh**: 
    - Symmetrically encrypts or decrypts a file.
-   - Usage: `crypt-sym-file.zsh -f <file> -o <output> -m <mode> [-p password] [-a]`
+   - Usage: `gpg-crypt-sym.zsh -f <file> -o <output> -m <mode> [-p password] [-a]`
 
-2. **crypt-file.zsh**: 
+2. **gpg-crypt.zsh**: 
    - Asymmetrically encrypts or decrypts a file.
-   - Usage: `crypt-file.zsh -f <file> -o <output> -r <recipient> -m <mode> [-a]`
+   - Usage: `gpg-crypt.zsh -f <file> -o <output> -r <recipient> -m <mode> [-a]`
 
-3. **sign-file.zsh**: 
+3. **gpg-sign-file.zsh**: 
    - Signs a file using a specified GPG key.
-   - Usage: `sign-file.zsh -f <file> -o <output> -k <key> -s <signing_option>`
+   - Usage: `gpg-sign-file.zsh -f <file> -o <output> -k <key> -s <signing_option>`
 
 4. **gpg-verify-file.zsh**: 
    - Verifies a file against its signature.
@@ -41,7 +41,7 @@ This project provides a set of scripts for signing, encrypting, and verifying fi
 ## Requirements
 
 - GPG installed on your system.
-- Python 3.12 for Python scripts.
+- Nix package Manager (for Python scripts)
 
 ## License
 

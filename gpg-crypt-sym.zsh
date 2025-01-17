@@ -1,13 +1,5 @@
 #!/usr/bin/env bash
 
-# Symmetrically encrypt/decrypt a file using GPG
-# Usage: crypt-sym-file.zsh -f <file> -o <output> -m <mode> [-p password] [-a]
-# -f: The file to encrypt/decrypt
-# -o: The output file (optional)
-# -m: Mode (encrypt/decrypt)
-# -p: Password (optional, will prompt if not provided)
-# -a: Use ASCII armor (for encryption)
-
 while getopts "f:o:m:p:ah" opt; do
     case $opt in
         f) file=$OPTARG ;;
@@ -16,7 +8,7 @@ while getopts "f:o:m:p:ah" opt; do
         p) password=$OPTARG ;;
         a) armor=true ;;
         h)
-            echo "Usage: crypt-sym-file.zsh -f <file> -o <output> -m <mode> [-p password] [-a]"
+            echo "Usage: gpg-crypt-sym.zsh -f <file> -o <output> -m <mode> [-p password] [-a]"
             echo "-f: The file to encrypt/decrypt"
             echo "-o: The output file (optional)"
             echo "-m: Mode (encrypt/decrypt)"

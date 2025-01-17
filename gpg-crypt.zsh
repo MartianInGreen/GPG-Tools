@@ -1,13 +1,5 @@
 #!/usr/bin/env bash
 
-# Encrypt or decrypt a file using GPG
-# Usage: crypt-file.zsh -f <file> -o <output> -r <recipient> -m <mode> [-a]
-# -f: The file to encrypt/decrypt
-# -o: The output file
-# -r: The recipient's email or key ID (for encryption)
-# -m: Mode (encrypt or decrypt)
-# -a: Use ASCII armor output (for encryption)
-
 # Parse arguments
 while getopts "f:o:r:m:ah" opt; do
     case $opt in
@@ -27,7 +19,7 @@ while getopts "f:o:r:m:ah" opt; do
             armor=true
             ;;
         h)
-            echo "Usage: crypt-file.zsh -f <file> -o <output> -r <recipient> -m <mode> [-a]"
+            echo "Usage: gpg-crypt.zsh -f <file> -o <output> -r <recipient> -m <mode> [-a]"
             echo "-f: The file to encrypt/decrypt"
             echo "-o: The output file"
             echo "-r: The recipient's email or key ID (for encryption)"

@@ -1,12 +1,5 @@
 #!/usr/bin/env bash
 
-# Sign a file using GPG
-# Usage: sign-file.zsh -f <file> -o <output> -k <key>
-# -f: The file to sign
-# -o: The output file / When left blank, the signed file will be saved as <file>.sig
-# -k: The key (keyID) to use for signing / When left blank, all keys will be listed and you will be prompted to choose one
-# -s: Signing option, either clearsign or detach-sign
-
 # Parse arguments
 while getopts "f:o:k:s:h" opt; do
     case $opt in
@@ -23,7 +16,7 @@ while getopts "f:o:k:s:h" opt; do
             sign=$OPTARG
             ;;
         h)
-            echo "Usage: sign-file.zsh -f <file> -o <output> -k <key>"
+            echo "Usage: gpg-sign-file.zsh -f <file> -o <output> -k <key>"
             echo "-f: The file to sign"
             echo "-o: The output file / When left blank, the signed file will be saved as <file>.sig"
             echo "-k: The key (keyID) to use for signing / When left blank, all keys will be listed and you will be prompted to choose one"
